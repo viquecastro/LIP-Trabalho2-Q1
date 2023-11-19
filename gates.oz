@@ -1,11 +1,11 @@
 functor
 export
-   NotGate
-   AndG
-   OrG
-   NandG
-   NorG
-   XorG
+   notg:  NotGate
+   andg:  AndG
+   org:   OrG
+   nandg: NandG
+   norg:  NorG
+   xorg:  XorG
 
 define
     fun {GateMaker F}
@@ -33,3 +33,4 @@ define
     NandG={GateMaker fun {$ X Y} 1-X*Y end}
     NorG ={GateMaker fun {$ X Y} 1-X-Y+X*Y end}
     XorG ={GateMaker fun {$ X Y} X+Y-2*X*Y end}
+end

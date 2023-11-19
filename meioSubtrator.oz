@@ -1,14 +1,14 @@
 functor 
 import 
-    gates 
+    gates at 'gates.ozf'
 
 define
     fun{halfSubtractor A B}
         local S T NOT 
         in
-            NOT= {gates.NotGate A}
-            S= {gates.XorG A B}
-            T= {gates.AndG NOT B}
+            NOT= {gates.notg A}
+            S= {gates.xorg A B}
+            T= {gates.andg NOT B}
 
             % Agregando as saídas em uma tupla
             {S T}
